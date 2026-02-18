@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Noozi Production Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional portfolio and service showcase website for Noozi Production, a media production company specializing in high-impact visual storytelling, commercial videography, and brand narratives.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a modern, responsive single-page application (SPA) built to display the company's portfolio, services, and pricing structure. It features a custom design system with a distinct "Green & Gold" color palette, smooth scroll animations, and an interactive user interface tailored for both desktop and mobile devices.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+-   **Frontend Framework:** React (v18+)
+-   **Build Tool:** Vite
+-   **Language:** TypeScript
+-   **Styling:** Tailwind CSS
+-   **Animations:** Framer Motion
+-   **Icons:** Lucide React
+-   **Routing:** React Router DOM
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **Responsive Design:** Fully optimized layout for mobile, tablet, and desktop screens.
+-   **Dynamic Navigation:** Smart navbar with scroll-aware styling and mobile-responsive menu.
+-   **Interactive UI:** Custom animations, hover effects, and smooth page transitions using Framer Motion.
+-   **Portfolio Showcase:** Video grid layout with modal playback for featured works.
+-   **Service Listings:** Detailed breakdown of services with custom iconography.
+-   **Rate Cards:** Clear, structured pricing tables for B2B and standard clients.
+-   **Contact Integration:** Functional contact form layout and direct communication links.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+src/
+├── assets/         # Static assets (images, videos, icons)
+├── components/     # Reusable UI components (Navbar, Hero, Footer, etc.)
+├── pages/          # Main page views (Home, Works, Services, etc.)
+├── utils/          # Helper functions and utilities
+├── App.tsx         # Main application component and routing configuration
+└── main.tsx        # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Akshay-krishna-r-47/nooziproduction.git
+    cd nooziproduction
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
+
+## License
+
+All rights reserved. No part of this codebase or design may be reproduced or used without explicit permission from Noozi Production.
