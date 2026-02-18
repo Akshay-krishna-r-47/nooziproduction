@@ -61,6 +61,21 @@ src/
     npm run build
     ```
 
+## Deployment on Render
+
+To deploy this project as a **Static Site** on [Render](https://render.com):
+
+1.  **New Static Site:** Connect your GitHub repository.
+2.  **Settings:**
+    -   **Build Command:** `npm run build`
+    -   **Publish Directory:** `dist`
+3.  **Rewrites (Crucial for React Router):**
+    -   Go to **Redirects/Rewrites** tab.
+    -   Add a new rule:
+        -   **Source:** `/*`
+        -   **Destination:** `/index.html`
+        -   **Action:** `Rewrite`
+
 ## License
 
 All rights reserved. No part of this codebase or design may be reproduced or used without explicit permission from Noozi Production.
